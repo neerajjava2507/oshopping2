@@ -1,17 +1,28 @@
 package com.nee.web.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.nee.back.DAO.categoryDAO;
+
 @Controller
 public class PageController {
+	
+	@Autowired
+	private categoryDAO cateDAO;
 
 	@RequestMapping(value = {"/","/home","/index"})
 	public ModelAndView index() {
 		
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "Home");
+		
+		//passing the list of category
+		
+		mv.addObject("categories", cateDAO.list());
+		
 		mv.addObject("userClickHome", true);
 		return mv;
 	}

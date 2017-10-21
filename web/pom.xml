@@ -14,7 +14,17 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- link project to backend -->
 		<dependency>
+
+				<groupId>com.nee</groupId>
+				<artifactId>back</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+
+			</dependency>
+		<dependency>
+
+			
 
 			<!-- javaee api dependency -->
 
