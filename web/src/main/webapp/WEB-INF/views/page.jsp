@@ -25,8 +25,6 @@
 	window.menu = '${title}';
 </script>
 
-
-
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
@@ -60,6 +58,11 @@
 
 	<c:if test="${userClickContact==true }">
 		<%@include file="./Contact.jsp"%>
+	</c:if>
+	
+	
+	<c:if test="${userClickproductbycategory==true or userClickAllProducts==true }">
+		<%@include file="./listProducts.jsp"%>
 	</c:if>
 
 </div>

@@ -56,4 +56,19 @@ public class categoryDAOimpl implements categoryDAO {
 		return categories;
 	}
 
+	@Override
+	public category get(int id) {
+	
+		for(category cate : categories) {
+			
+			if(cate.getId()==id) {
+				return cate;
+				
+			}
+			
+		}
+		
+		return null;
+	}
+
 }
